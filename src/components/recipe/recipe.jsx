@@ -4,35 +4,21 @@
     Author: Harsh Bhavsar
     Repo: https://github.com/harshbits/cognitive-cooking/
 */
-import React, {Component} from 'react';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
-import FlatButton from 'material-ui/FlatButton';
+import React from 'react';
+import {Card, CardMedia, CardTitle} from 'material-ui/Card';
 import './recipe.css';
 
-class RecipeComponent extends Component {
-
-    render() {
-      return (
-        <div>
-          <Card style ={{ width: '300px', height: '300px', margin: 'auto'}}>
-            <CardHeader
-              title="URL Avatar"
-              subtitle="Subtitle"
-              avatar="/images/dark-wood.png"
-            />
-            <CardMedia
-              overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />}
-            >
-            <img src="/images/recipes/biryani.jpg" alt="" />
-            </CardMedia>
-            <CardActions>
-              <FlatButton label="Action1" />
-              <FlatButton label="Action2" />
-            </CardActions>
-          </Card>
-        </div>
-      );
-  }
+const RecipeComponent = ({recipe}) => {
+  const {recipeImage, title, subtitle } = recipe
+    return (
+      <Card style={{ width: '350px', height: '350px', margin: 'auto'}}>
+        <CardMedia
+          overlay={<CardTitle title={title} subtitle={subtitle} />}
+        >
+        <img src={recipeImage} alt="" />
+        </CardMedia>
+      </Card>
+    );
 }
 
 export default RecipeComponent;

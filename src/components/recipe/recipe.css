@@ -1,0 +1,8 @@
+.recipe {
+  margin: '10px';
+  display: 'flex';
+  flex-direction: 'column';
+  -webkit-flex-wrap: 'wrap';
+  flex-wrap: 'wrap';
+  display: -webkit-flex;
+}

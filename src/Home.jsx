@@ -12,8 +12,11 @@ import './Home.css';
 import ProgressComponent from './components/progress/progress';
 import BrowserDetectComponent from './components/browser-detect/browser-detect';
 import HeaderComponent from './components/header/header';
+import RecipeList from './components/recipe/recipeList';
+import ShowcaseLayout from './components/recipe/ShowcaseLayout';
 import ContactComponent from './components/contact/contact';
 import FooterComponent from './components/footer/footer';
+import recipeList from './mockData'
 
 class Home extends Component {
   render() {
@@ -27,6 +30,7 @@ class Home extends Component {
                   <HeaderComponent></HeaderComponent>
                 </div>
               </div>
+              <RecipeList recipeList={recipeList} />
               <div className="section">
                 <div className="section-container">
                   <ContactComponent></ContactComponent>
